@@ -92,7 +92,8 @@
     "tumblr","embedly","bot","crawl","spider","fetch","scan",
     "headless","phantom","selenium","puppeteer","playwright",
     "wget","curl","python-requests","axios","go-http-client",
-    "java/","libwww","lwp-","okhttp"
+    "java/","libwww","lwp-","okhttp",
+    "chrome-lighthouse","pagespeed","gtmetrix","pingdom","webpagetest","ptst"
     ];
 
     if(BOT_UA_PATTERNS.some(p=>ua.includes(p)))return;
