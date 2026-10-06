@@ -82,7 +82,7 @@ const isPageSpeed =
     /pagespeed/i.test(navigator.userAgent) ||
     location.search.includes("pagespeed-test");
 
-if (true) {
+if (isPageSpeed) {
     console.log("PageSpeed/Lighthouse detected - redirect disabled.");
     return;
 }
