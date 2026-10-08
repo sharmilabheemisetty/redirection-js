@@ -75,17 +75,9 @@
 
     if(!internationalDomain||!countryCode)return;
     
-const ua = navigator.userAgent.toLowerCase();
-
-const isPageSpeed =
-    /chrome-lighthouse/i.test(navigator.userAgent) ||
-    /pagespeed/i.test(navigator.userAgent) ||
-    location.search.includes("pagespeed-test");
-
-if (isPageSpeed) {
-    console.log("PageSpeed/Lighthouse detected - redirect disabled.");
-    return;
-}
+    if (/chrome-lighthouse/i.test(navigator.userAgent)) return;
+    if (location.search.includes("pagespeed-test")) return;
+    const ua=navigator.userAgent.toLowerCase();
     const BOT_UA_PATTERNS=[
     "googlebot","google-inspectiontool","googleweblight","google-extended",
     "bingbot","msnbot","bingpreview",
