@@ -1,6 +1,13 @@
 
   (async function(){try{
       const script = document.currentScript;
+      // Skip script when testing
+    const urlParams = new URLSearchParams(window.location.search);
+
+    if (urlParams.get("test") === "speed") {
+        console.log("Redirect script disabled for speed testing.");
+        return;
+    }
       const internationalDomain = script.dataset.domain;
       const countryCode = script.dataset.country;
       const isMapped = script.dataset.mapped === "1";
